@@ -1,0 +1,131 @@
+@import "variables";
+
+.table {
+  position: relative;
+  &__header {
+    max-width: 80vw;
+  }
+
+  &__pagination {
+    background-color: @blue;
+    width: 70px;
+    color: @white;
+    cursor: pointer;
+  }
+
+  &__prev {
+    padding-right: 5px;
+    padding-left: 15px;
+    /*Chrome,Safari*/
+    -webkit-clip-path: polygon(10px 0px,0px 10px,70px 0px,70px 20px,10px 20px);
+
+    /*Firefox*/
+    clip-path: url("#clipPolygon-prev");
+  }
+  &__next {
+    padding-left: 5px;
+    padding-right: 25px;
+    /*Chrome,Safari*/
+    -webkit-clip-path: polygon(50px 0px,60px 10px,50px 20px,0px 20px,0px 0px);
+
+    /*Firefox*/
+    clip-path: url("#clipPolygon-next");
+
+  }
+
+  &__pokemonlist {
+    border-spacing: 0;
+    border-collapse: collapse;
+    position: relative;
+    left: 10vw;
+    width: 80vw;
+    &__header {
+      font-size: 36px;
+    }
+
+    &__cell {
+      border-top: 1px @black-border;
+    }
+
+    &__name {
+      width: 200px;
+      text-transform: capitalize;
+      font-size: 24px;
+    }
+
+    &__hp {
+      font-size: 18px;
+    }
+
+    &__photo {
+      &__img {
+        transition: transform .5s;
+        &:hover {
+          transform: rotate(20deg);
+        }
+
+      }
+    }
+  }
+  &__loader {
+    background-color: @white;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
+
+    &__image {
+      max-width: 80vw;
+    }
+
+
+    &__progressbar {
+      width: 84vw;
+      height: 10px;
+      border: 10px @black-border;
+      border-radius: 10px;
+      background-color: @black;
+      position: fixed;
+      left: 8vw;
+    }
+
+    &__progress {
+      width: 80vw;
+      height: 10px;
+      background-color: @red;
+      border-radius: 2px;
+      position: fixed;
+      left: 10vw;
+      transition: transform 1s;
+      transform-origin: left center;
+    }
+    &__opening {
+      width: 100px;
+      height: 100px;
+      background-color: @white;
+      border: 10px @black-border;
+      border-radius: 50%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: -50px;
+      position: absolute;
+      left: 0;
+      right: 0;
+
+      line-height: 100px;
+      font-size: 3rem;
+    }
+    &__description {
+      margin-top: 80px;
+      font-size: 2rem;
+    }
+  }
+}
+
+.hidden {
+  transform: rotateY(90deg);
+  transform-origin: left;
+}
+

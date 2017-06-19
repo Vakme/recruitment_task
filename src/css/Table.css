@@ -1,0 +1,109 @@
+.table {
+  position: relative;
+}
+.table__header {
+  max-width: 80vw;
+}
+.table__pagination {
+  background-color: #386ABB;
+  width: 70px;
+  color: #ffffff;
+  cursor: pointer;
+}
+.table__prev {
+  padding-right: 5px;
+  padding-left: 15px;
+  /*Chrome,Safari*/
+  -webkit-clip-path: polygon(10px 0px, 0px 10px, 70px 0px, 70px 20px, 10px 20px);
+  /*Firefox*/
+  clip-path: url("#clipPolygon-prev");
+}
+.table__next {
+  padding-left: 5px;
+  padding-right: 25px;
+  /*Chrome,Safari*/
+  -webkit-clip-path: polygon(50px 0px, 60px 10px, 50px 20px, 0px 20px, 0px 0px);
+  /*Firefox*/
+  clip-path: url("#clipPolygon-next");
+}
+.table__pokemonlist {
+  border-spacing: 0;
+  border-collapse: collapse;
+  position: relative;
+  left: 10vw;
+  width: 80vw;
+}
+.table__pokemonlist__header {
+  font-size: 36px;
+}
+.table__pokemonlist__cell {
+  border-top: 1px black solid;
+}
+.table__pokemonlist__name {
+  width: 200px;
+  text-transform: capitalize;
+  font-size: 24px;
+}
+.table__pokemonlist__hp {
+  font-size: 18px;
+}
+.table__pokemonlist__photo__img {
+  transition: transform .5s;
+}
+.table__pokemonlist__photo__img:hover {
+  transform: rotate(20deg);
+}
+.table__loader {
+  background-color: #ffffff;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.table__loader__image {
+  max-width: 80vw;
+}
+.table__loader__progressbar {
+  width: 84vw;
+  height: 10px;
+  border: 10px black solid;
+  border-radius: 10px;
+  background-color: #000000;
+  position: fixed;
+  left: 8vw;
+}
+.table__loader__progress {
+  width: 80vw;
+  height: 10px;
+  background-color: #b90000;
+  border-radius: 2px;
+  position: fixed;
+  left: 10vw;
+  transition: transform 1s;
+  transform-origin: left center;
+}
+.table__loader__opening {
+  width: 100px;
+  height: 100px;
+  background-color: #ffffff;
+  border: 10px black solid;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -50px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  line-height: 100px;
+  font-size: 3rem;
+}
+.table__loader__description {
+  margin-top: 80px;
+  font-size: 2rem;
+}
+.hidden {
+  transform: rotateY(90deg);
+  transform-origin: left;
+}

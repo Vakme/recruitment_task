@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("../assets/playstation-pattern.png");
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+h1,
+h2 {
+  font-weight: normal;
+}
+a {
+  color: #386ABB;
+  text-decoration: none;
+}
+#app {
+  font-family: 'Josefin Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #000000;
+  padding-top: 30px;
+  margin: 0;
+  min-height: 100%;
+}

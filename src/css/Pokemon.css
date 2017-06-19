@@ -1,0 +1,40 @@
+.pokemon__details {
+  width: 300px;
+  margin: auto;
+  background-color: #ffffff;
+  border-top: 20px solid #b90000;
+  border-bottom: 20px solid #b90000;
+  border-radius: 20px;
+}
+.pokemon__details__name {
+  font-size: 3rem;
+  text-transform: capitalize;
+  margin: 0;
+  padding-bottom: 20px;
+  background-color: #b90000;
+  color: #ffffff;
+}
+.pokemon__details__stats {
+  padding: 20px 20px 0 20px;
+}
+.pokemon__details__stat {
+  text-align: left;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+.pokemon__details__evolution {
+  padding: 0 20px 20px 20px;
+}
+.pokemon__details__evolution__link {
+  background-color: #386ABB;
+  color: #ffffff;
+  padding: 5px 10px;
+}
+.pokemon__description {
+  font-size: 1.5rem;
+  width: 360px;
+  margin: auto;
+}
+.pokemon__empty {
+  width: 200px;
+}

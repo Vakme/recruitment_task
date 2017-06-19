@@ -1,0 +1,49 @@
+@import "variables";
+
+.pokemon {
+
+  &__details {
+    width: 300px;
+    margin: auto;
+    background-color: @white;
+    border-top: 20px @red-border;
+    border-bottom: 20px @red-border;
+    border-radius: 20px;
+
+    &__name {
+      font-size: 3rem;
+      text-transform: capitalize;
+      margin: 0;
+      padding-bottom: 20px;
+      background-color: @red;
+      color: @white;
+    }
+    &__stats {
+      padding: 20px 20px 0 20px;
+    }
+    &__stat {
+      text-align: left;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    &__evolution {
+      padding: 0 20px 20px 20px;
+
+      &__link {
+        background-color: @blue;
+        color: @white;
+        padding: 5px 10px;
+      }
+    }
+  }
+
+  &__description {
+    font-size: 1.5rem;
+    width: 360px;
+    margin: auto;
+  }
+  &__empty {
+    width: 200px;
+  }
+}

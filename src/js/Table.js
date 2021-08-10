@@ -42,7 +42,7 @@ export default{
      * @param obj component instance
      */
     getPokeList: function (obj) {
-      let url = 'http://pokeapi.co/api/v2/pokemon/';
+      let url = 'https://pokeapi.co/api/v2/pokemon/';
       xhr(url, function (err, resp, body) {
         if(resp.statusCode == 200) {
           const res = JSON.parse(body);

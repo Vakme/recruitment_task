@@ -32,5 +32,5 @@ jobs:
         git config --global user.email 'vakme@users.noreply.github.com'
         git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
         git add dist && git commit -m "Deploy to gh-pages"
-        git subtree push --force --prefix dist origin gh-pages
+        git push origin :gh-pages && git subtree push --prefix dist origin gh-pages
    

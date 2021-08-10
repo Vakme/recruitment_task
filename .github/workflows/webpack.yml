@@ -38,5 +38,5 @@ jobs:
         # Provide commit message if you would like to commit, file add still occurs
         commit-message: Deploy to gh pages
         # Specific files to add before the commit.
-        files: /dist/*
+        files: dist/*
    

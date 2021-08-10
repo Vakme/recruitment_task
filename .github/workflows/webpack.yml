@@ -33,10 +33,3 @@ jobs:
         git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
         git add dist && git commit -m "Deploy to gh-pages"
         git push origin :gh-pages && git subtree push --prefix dist origin gh-pages
-    - name: GitHub Pages
-      uses: crazy-max/ghaction-github-pages@v2.5.0
-      with:
-        # Build directory to deploy
-        build_dir: .
-      env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

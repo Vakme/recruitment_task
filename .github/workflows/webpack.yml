@@ -28,6 +28,9 @@ jobs:
         npm run build
     - name: Commit and Push Branch
       run: |
+        git config --global user.name 'Ola's Deployer'
+        git config --global user.email 'vakme@users.noreply.github.com'
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
         git add dist && git commit -m "Deploy to gh-pages"
         git subtree push --prefix dist origin gh-pages
    

@@ -14,12 +14,12 @@ export default new Router({
   mode: 'history',
   routes: [
     {
-      path: '/',
+      path: './',
       name: 'Table',
       component: Table
     },
-    { path: '/pokemon/:id', component: Pokemon },
-    { path: "/error", component: NotFound },
+    { path: './pokemon/:id', component: Pokemon },
+    { path: "./error", component: NotFound },
     { path: "*", component: NotFound }
   ]
 })
